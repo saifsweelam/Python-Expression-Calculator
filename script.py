@@ -1,7 +1,7 @@
 # Import staff from tkinter library
 from tkinter import Tk, Entry, Button, Label, END
 
-# Import built-in math module in python
+# Import built-in math & os modules in python
 import math
 import os
 # Import module to open URLs in browser
@@ -14,7 +14,8 @@ root.resizable(False, False)  # To prevent user from resizing window
 
 # Set window icon
 path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'calc.ico')
-root.iconbitmap(path)
+if os.path.isfile(path):
+    root.iconbitmap(path)
 
 # Add entry field
 e = Entry(root, fg='brown', borderwidth=5, width=80)
